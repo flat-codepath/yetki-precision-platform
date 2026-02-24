@@ -4,6 +4,8 @@ import serviceScanning from "@/assets/service-scanning.jpg";
 import serviceReverse from "@/assets/service-reverse.jpg";
 import serviceInspection from "@/assets/service-inspection.jpg";
 import serviceDevelopment from "@/assets/service-development.jpg";
+import service3dPrinting from "@/assets/service-3dprinting.jpg";
+import serviceFrp from "@/assets/service-frp.jpg";
 
 const services = [
   {
@@ -35,6 +37,18 @@ const services = [
     description: "End-to-end engineering support from concept design through prototyping to production. We partner with OEMs and manufacturers to accelerate time-to-market.",
     benefits: ["DFM analysis", "Rapid prototyping", "Production readiness"],
     image: serviceDevelopment,
+  },
+  {
+    title: "3D Printing & Additive Manufacturing",
+    description: "Industrial-grade 3D printing for rapid prototyping, functional testing, and low-volume production. From concept models to end-use parts, we deliver precision additive manufacturing with multiple material options.",
+    benefits: ["FDM, SLA & SLS", "Rapid turnaround", "Functional prototypes"],
+    image: service3dPrinting,
+  },
+  {
+    title: "FRP & Carbon Fibre Moulds",
+    description: "Custom fibre-reinforced polymer and carbon fibre mould fabrication for lightweight, high-strength applications. We engineer composite tooling for automotive, aerospace, and industrial sectors.",
+    benefits: ["Lightweight & durable", "Custom layup design", "High-temp resistant"],
+    image: serviceFrp,
   },
 ];
 

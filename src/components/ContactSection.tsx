@@ -113,10 +113,21 @@ const ContactSection = () => {
                 <MapPin className="text-metallic" size={20} />
               </div>
               <div>
-                <h4 className="font-display text-primary-foreground font-semibold mb-1">Location</h4>
+                <h4 className="font-display text-primary-foreground font-semibold mb-1">Office Address</h4>
                 <p className="text-steel-light text-sm">#36 Second Floor Technocrats Industrial Estate,
 Balanagar, Kukatpally Industrial Estate, Balanagar,
 Hyderabad, Telangana 500037, India</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-md bg-metallic/10 flex items-center justify-center flex-shrink-0">
+                <MapPin className="text-metallic" size={20} />
+              </div>
+              <div>
+                <h4 className="font-display text-primary-foreground font-semibold mb-1">Manufacturing Address</h4>
+                <p className="text-steel-light text-sm">Survey No. 150, IDA Bollaram,
+Jinnaram Mandal, Medak District,
+Hyderabad, Telangana 502325, India</p>
               </div>
             </div>
 

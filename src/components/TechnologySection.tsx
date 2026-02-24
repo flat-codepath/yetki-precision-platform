@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import techCnc from "@/assets/tech-cnc.jpg";
 import techScanner from "@/assets/tech-scanner.jpg";
 import techCmm from "@/assets/tech-cmm.jpg";
-import techCad from "@/assets/tech-cad.jpg";
+import tech3dPrint from "@/assets/tech-3dprint.jpg";
 
 const technologies = [
   { title: "5-Axis CNC Machining", description: "Multi-axis precision milling and turning centres for complex geometries", image: techCnc },
   { title: "3D Scanning Systems", description: "Industrial structured light and handheld laser scanners for high-accuracy capture", image: techScanner },
   { title: "CMM Inspection", description: "Coordinate measuring machines for certified dimensional verification", image: techCmm },
-  { title: "CAD/CAM Software", description: "Industry-leading design and manufacturing software suites", image: techCad },
+  { title: "3D Printing & Life Size Models", description: "Industrial additive manufacturing for rapid prototyping and life-size model creation", image: tech3dPrint },
 ];
 
 const TechnologySection = () => {
