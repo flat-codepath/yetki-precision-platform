@@ -96,7 +96,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display text-primary-foreground font-semibold mb-1">Email</h4>
-                <p className="text-steel-light text-sm">info@yetkiengineering.com</p>
+                <p className="text-steel-light text-sm">arifsayyed@yetkiengineering.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -105,7 +105,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display text-primary-foreground font-semibold mb-1">Phone</h4>
-                <p className="text-steel-light text-sm">+90 (216) 555 0123</p>
+                <p className="text-steel-light text-sm">+91 9505923787</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -114,14 +114,16 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display text-primary-foreground font-semibold mb-1">Location</h4>
-                <p className="text-steel-light text-sm">Organize Sanayi Bölgesi, Istanbul, Turkey</p>
+                <p className="text-steel-light text-sm">#36 Second Floor Technocrats Industrial Estate,
+Balanagar, Kukatpally Industrial Estate, Balanagar,
+Hyderabad, Telangana 500037, India</p>
               </div>
             </div>
 
             {/* Map placeholder */}
             <div className="rounded-lg overflow-hidden border border-steel/20 h-56">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385396.3894620051!2d28.731994266464975!3d41.00498225498181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7611.59182112768!2d78.43727450496536!3d17.469479733450136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%2336%20Second%20Floor%20Technocrats%20Industrial%20Estate%2C%20Balanagar%2C%20Kukatpally%20Industrial%20Estate%2C%20Balanagar%2C%20Hyderabad%2C%20Telangana%20500037%2C%20India!5e0!3m2!1sen!2sin!4v1771957114183!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
