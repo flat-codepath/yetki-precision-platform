@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
@@ -8,6 +9,31 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic
+    emailjs
+    .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        fullname: formData.name,
+        email: formData.email,
+        company: formData.company,
+        project_description: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      alert("Thank you! We'll be in touch within 24 hours.");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: ""
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message.");
+    });
     alert("Thank you! We'll be in touch within 24 hours.");
     setFormData({ name: "", email: "", company: "", message: "" });
   };
@@ -105,7 +131,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display text-primary-foreground font-semibold mb-1">Phone</h4>
-                <p className="text-steel-light text-sm">+91 9505923787</p>
+                <p className="text-steel-light text-sm">+91 9505923789</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -125,16 +151,17 @@ Hyderabad, Telangana 500037, India</p>
               </div>
               <div>
                 <h4 className="font-display text-primary-foreground font-semibold mb-1">Manufacturing Address</h4>
-                <p className="text-steel-light text-sm">Survey No. 150, IDA Bollaram,
-Jinnaram Mandal, Medak District,
-Hyderabad, Telangana 502325, India</p>
+                <p className="text-steel-light text-sm">Sy. No. 289 (Part), Plot No. 79, Phase V,
+IDA Jeedimetla, Hyderabad-500055,
+Quthbullapur Mandal & Municipality,
+Medchal-Malkajgiri Dist., Telangana State</p>
               </div>
             </div>
 
             {/* Map placeholder */}
             <div className="rounded-lg overflow-hidden border border-steel/20 h-56">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7611.59182112768!2d78.43727450496536!3d17.469479733450136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%2336%20Second%20Floor%20Technocrats%20Industrial%20Estate%2C%20Balanagar%2C%20Kukatpally%20Industrial%20Estate%2C%20Balanagar%2C%20Hyderabad%2C%20Telangana%20500037%2C%20India!5e0!3m2!1sen!2sin!4v1771957114183!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3805.7784184323214!2d78.44006683283895!3d17.47031648160511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1772107435260!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -143,6 +170,7 @@ Hyderabad, Telangana 502325, India</p>
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Yetki Engineering Location"
               />
+              
             </div>
           </motion.div>
         </div>
